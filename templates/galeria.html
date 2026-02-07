@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquivo de Rituais</title>
+    <style>
+        /* Estilo da Página */
+        body {
+            background: #0a0a0a;
+            color: white;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 { color: #d4af37; text-align: center; font-size: 1.5rem; margin-bottom: 30px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .mini-card {
+            background: #111;
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .mini-card:hover { transform: scale(1.05); border-color: #d4af37; }
+        .mini-card img { width: 100%; border-radius: 5px; margin-bottom: 8px; }
+        .mini-card p { font-size: 0.8rem; margin: 0; font-weight: bold; }
+
+        /* Cores dos Elementos */
+        .Morte { color: #777; }
+        .Conhecimento { color: #d4af37; }
+        .Sangue { color: #8b0000; }
+        .Energia { color: #9b30ff; }
+        .Medo { color: #fff; text-shadow: 0 0 5px #fff; }
+
+        /* --- O MODAL ATUALIZADO (SOLUÇÃO PARA O TEXTO) --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #0a0a0a;
+            padding: 25px;
+            border: 3px solid #d4af37;
+            width: 85%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0,0,0,1);
+
+            /* Ajustes para textos longos */
+            max-height: 85vh;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .modal-content img {
+            width: 90%;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #222;
+        }
+
+        .modal-content h2 { font-size: 1.5rem; margin: 10px 0; color: #fff; }
+
+        /* Estilo para o Círculo no Modal */
+        #m-circulo {
+            color: #aaa;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .modal-content .pe-custo { color: #d4af37; font-weight: bold; margin-bottom: 15px; font-size: 1.1rem; }
+
+        .modal-content p#m-desc {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        /* Scrollbar customizada para o Modal */
+        .modal-content::-webkit-scrollbar { width: 6px; }
+        .modal-content::-webkit-scrollbar-track { background: #050505; }
+        .modal-content::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+
+        .btn-voltar { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div style="margin-bottom: 20px;">
+        <a href="/" class="btn-voltar">← VOLTAR AO TERMINAL</a>
+    </div>
+
+    <h1>ARQUIVO TÉCNICO DE RITUAIS</h1>
+
+    {% for elem in ['Morte', 'Conhecimento', 'Sangue', 'Energia', 'Medo'] %}
+        <h2 class="{{ elem }}">{{ elem.upper() }}</h2>
+        <div class="grid">
+            {% for ritual in rituais|selectattr('elemento', 'equalto', elem)|sort(attribute='nome') %}
+                <div class="mini-card" onclick="abrir('{{ ritual.nome }}', '{{ ritual.img }}', '{{ ritual.desc }}', '{{ ritual.elemento }}', '{{ ritual.pe }}', '{{ ritual.circulo }}')">
+                    <img src="/static/{{ ritual.img }}" alt="{{ ritual.nome }}">
+                    <p>{{ ritual.nome }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <div id="ritualModal" class="modal" style="display: none;" onclick="fechar(event)">
+        <div class="modal-content" id="m-border" onclick="event.stopPropagation()">
+            <img id="m-img" src="">
+            <h2 id="m-nome"></h2>
+
+            <div id="m-circulo"></div>
+
+            <div class="pe-custo">CUSTO: <span id="m-pe"></span> PE</div>
+            <p id="m-desc"></p>
+        </div>
+    </div>
+
+    <script>
+        function abrir(nome, img, desc, elem, pe, circulo) {
+            document.getElementById('m-nome').innerText = nome;
+            document.getElementById('m-desc').innerText = desc;
+            document.getElementById('m-pe').innerText = pe;
+            document.getElementById('m-circulo').innerText = circulo; // Preenche o círculo
+            document.getElementById('m-img').src = '/static/' + img;
+
+            // Cores dinâmicas para a borda do Modal
+            let cores = {
+                "Morte": "#333",
+                "Conhecimento": "#d4af37",
+                "Sangue": "#8b0000",
+                "Energia": "#9b30ff",
+                "Medo": "#fff"
+            };
+
+            document.getElementById('m-border').style.borderColor = cores[elem] || "#d4af37";
+            document.getElementById('ritualModal').style.display = "flex";
+        }
+
+        function fechar(event) {
+            document.getElementById('ritualModal').style.display = "none";
+        }
+    </script>
+</body>
+</html>

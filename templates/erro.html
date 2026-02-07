@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ERRO DE PROTOCOLO</title>
+    <style>
+        body { background: #050505; color: #8b0000; font-family: 'Courier New', monospace; text-align: center; display: flex; flex-direction: column; justify-content: center; height: 100vh; margin: 0; }
+        .error-box { border: 2px solid #8b0000; padding: 40px; margin: auto; max-width: 600px; background: #0a0000; box-shadow: 0 0 30px rgba(139, 0, 0, 0.4); animation: glitch 0.3s infinite; }
+        @keyframes glitch { 0% { transform: translate(1px, 0); } 50% { transform: translate(-1px, 1px); } 100% { transform: translate(0, 0); } }
+        .btn { display: inline-block; margin-top: 30px; padding: 12px 25px; border: 1px solid #8b0000; color: #8b0000; text-decoration: none; font-weight: bold; text-transform: uppercase; }
+        .btn:hover { background: #8b0000; color: white; }
+    </style>
+</head>
+<body>
+    <div class="error-box">
+        <h1>Acesso Interrompido</h1>
+        <p>Credenciais insuficientes para o <strong>Nível de Patente necessário</strong>.</p>
+        <p>Tentativa sinalizada aos Oficiais de Segurança da Ordem.</p>
+        <a href="/" class="btn">Retornar ao Terminal</a>
+    </div>
+</body>
+</html>
