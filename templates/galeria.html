@@ -3,172 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquivo de Rituais</title>
+    <title>Arquivo de Rituais - NEX 50</title>
     <style>
-        /* Estilo da Página */
         body {
-            background: #0a0a0a;
+            background: radial-gradient(circle at center, #0a0a0a 0%, #050505 100%);
             color: white;
             font-family: 'Courier New', monospace;
             padding: 20px;
             margin: 0;
+            min-height: 100vh;
         }
 
-        h1 { color: #d4af37; text-align: center; font-size: 1.5rem; margin-bottom: 30px; }
+        h1 { color: #d4af37; text-align: center; font-size: 1.5rem; margin-bottom: 35px; letter-spacing: 5px; }
+
+        /* --- CONTAINER DAS CAPAS --- */
+        .filtro-container {
+            display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; flex-wrap: wrap;
+        }
+        .capa-wrapper {
+            display: flex; flex-direction: column; align-items: center; width: 160px; cursor: pointer; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-capa {
+            width: 100%; height: 230px; border: 2px solid #333; border-radius: 10px; object-fit: cover; opacity: 0.5; transition: 0.3s; margin-bottom: 12px;
+        }
+        .capa-label {
+            font-size: 0.7rem; color: #777; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; text-align: center;
+        }
+        .capa-wrapper:hover .btn-capa, .capa-wrapper.active .btn-capa { opacity: 1; border-color: #d4af37; box-shadow: 0 0 25px rgba(212, 175, 55, 0.3); }
+
+        /* --- SEÇÕES ALINHADAS (CORREÇÃO image_8bded6.png) --- */
+        .secao-elemento {
+            display: none;
+            margin-bottom: 60px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Títulos alinhados à esquerda com o grid */
+        h2 {
+            font-size: 1.3rem;
+            text-align: left;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            letter-spacing: 3px;
+            border-left: 4px solid; /* Borda de cor do elemento */
+        }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 25px;
+            padding-left: 5px;
         }
 
         .mini-card {
-            background: #111;
-            border: 2px solid #333;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            text-align: center;
-            transition: 0.3s;
+            background: #111; border: 2px solid #333; padding: 12px; border-radius: 10px; cursor: pointer; text-align: center; transition: 0.3s;
         }
+        .mini-card.hidden { display: none; }
         .mini-card:hover { transform: scale(1.05); border-color: #d4af37; }
-        .mini-card img { width: 100%; border-radius: 5px; margin-bottom: 8px; }
-        .mini-card p { font-size: 0.8rem; margin: 0; font-weight: bold; }
+        .mini-card img { width: 100%; border-radius: 6px; margin-bottom: 10px; }
+        .invert-icon { filter: invert(100%); }
 
-        /* Cores dos Elementos */
-        .Morte { color: #777; }
-        .Conhecimento { color: #d4af37; }
-        .Sangue { color: #8b0000; }
-        .Energia { color: #9b30ff; }
-        .Medo { color: #fff; text-shadow: 0 0 5px #fff; }
+        /* CORES DOS TÍTULOS E BORDAS */
+        .Morte { color: #777; border-color: #777; }
+        .Conhecimento { color: #d4af37; border-color: #d4af37; }
+        .Sangue { color: #8b0000; border-color: #8b0000; }
+        .Energia { color: #9b30ff; border-color: #9b30ff; }
+        .Medo { color: #fff; border-color: #fff; }
 
-        /* --- O MODAL ATUALIZADO (SOLUÇÃO PARA O TEXTO) --- */
+        .dual-border {
+            border: 3px solid transparent !important;
+            background: linear-gradient(#111, #111) padding-box,
+                        linear-gradient(90deg, #8b0000 50%, #d4af37 50%) border-box !important;
+        }
+
+        /* MODAL CORRIGIDO */
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.96); align-items: center; justify-content: center; backdrop-filter: blur(5px);
         }
-
         .modal-content {
-            background: #0a0a0a;
-            padding: 25px;
-            border: 3px solid #d4af37;
-            width: 85%;
-            max-width: 400px;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0,0,0,1);
-
-            /* Ajustes para textos longos */
-            max-height: 85vh;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: #0a0a0a; padding: 30px; border: 3px solid #d4af37; width: 88%; max-width: 400px;
+            text-align: center; border-radius: 15px; max-height: 85vh; overflow-y: auto; display: flex; flex-direction: column; align-items: center;
         }
-
-        .modal-content img {
-            width: 90%;
-            max-height: 250px;
-            object-fit: contain;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #222;
-        }
-
-        .modal-content h2 { font-size: 1.5rem; margin: 10px 0; color: #fff; }
-
-        /* Estilo para o Círculo no Modal */
-        #m-circulo {
-            color: #aaa;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .modal-content .pe-custo { color: #d4af37; font-weight: bold; margin-bottom: 15px; font-size: 1.1rem; }
-
-        .modal-content p#m-desc {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
-
-        /* Scrollbar customizada para o Modal */
-        .modal-content::-webkit-scrollbar { width: 6px; }
-        .modal-content::-webkit-scrollbar-track { background: #050505; }
-        .modal-content::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
-
-        .btn-voltar { color: #d4af37; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <div style="margin-bottom: 20px;">
-        <a href="/" class="btn-voltar">← VOLTAR AO TERMINAL</a>
+    <div style="margin-bottom: 25px;">
+        <a href="/" style="color: #d4af37; text-decoration: none; font-weight: bold;">← VOLTAR AO TERMINAL</a>
     </div>
 
     <h1>ARQUIVO TÉCNICO DE RITUAIS</h1>
 
-    {% for elem in ['Morte', 'Conhecimento', 'Sangue', 'Energia', 'Medo'] %}
-        <h2 class="{{ elem }}">{{ elem.upper() }}</h2>
-        <div class="grid">
-            {% for ritual in rituais|selectattr('elemento', 'equalto', elem)|sort(attribute='nome') %}
-                <div class="mini-card" onclick="abrir('{{ ritual.nome }}', '{{ ritual.img }}', '{{ ritual.desc }}', '{{ ritual.elemento }}', '{{ ritual.pe }}', '{{ ritual.circulo }}')">
-                    <img src="/static/{{ ritual.img }}" alt="{{ ritual.nome }}">
-                    <p>{{ ritual.nome }}</p>
-                </div>
-            {% endfor %}
+    <div class="filtro-container">
+        <div class="capa-wrapper" onclick="filtrarFonte('todos', this)">
+            <img src="/static/capa-todos.png" class="btn-capa" alt="Todos">
+            <span class="capa-label">Todos</span>
+        </div>
+        <div class="capa-wrapper" onclick="filtrarFonte('livro', this)">
+            <img src="/static/capa-livro.png" class="btn-capa" alt="Livro">
+            <span class="capa-label">Livro de Regras</span>
+        </div>
+        <div class="capa-wrapper" onclick="filtrarFonte('horror', this)">
+            <img src="/static/capa-horror.png" class="btn-capa" alt="Horror">
+            <span class="capa-label">Sobrevivendo ao Horror</span>
+        </div>
+        <div class="capa-wrapper" onclick="filtrarFonte('arquivos', this)">
+            <img src="/static/capa-arquivos.png" class="btn-capa" alt="Arquivos">
+            <span class="capa-label">Arquivos Secretos</span>
+        </div>
+    </div>
+
+    {% for elem in ['Morte', 'Conhecimento', 'Sangue', 'Sangue/Conhecimento', 'Energia', 'Medo'] %}
+        <div class="secao-elemento" data-elemento="{{ elem }}">
+
+            <h2 class="{{ elem|replace('/', '-') }}">
+                {% if elem == 'Sangue/Conhecimento' %}
+                    <span class="Sangue">SANGUE</span> / <span class="Conhecimento">CONHECIMENTO</span>
+                {% else %}
+                    {{ elem.upper() }}
+                {% endif %}
+            </h2>
+
+            <div class="grid">
+                {% for ritual in rituais|selectattr('elemento', 'equalto', elem)|sort(attribute='nome') %}
+                    <div class="mini-card {{ 'dual-border' if ritual.elemento == 'Sangue/Conhecimento' else '' }}"
+                         data-fonte="{{ ritual.fonte }}"
+                         onclick="abrir('{{ ritual.nome }}', '{{ ritual.img }}', '{{ ritual.desc }}', '{{ ritual.elemento }}', '{{ ritual.pe }}', '{{ ritual.circulo }}', {{ 'true' if ritual.invertir else 'false' }})">
+                        <img src="/static/{{ ritual.img }}" alt="" class="{{ 'invert-icon' if ritual.invertir else '' }}">
+                        <p>{{ ritual.nome }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     {% endfor %}
 
-    <div id="ritualModal" class="modal" style="display: none;" onclick="fechar(event)">
+    <div id="ritualModal" class="modal" onclick="fechar(event)">
         <div class="modal-content" id="m-border" onclick="event.stopPropagation()">
-            <img id="m-img" src="">
-            <h2 id="m-nome"></h2>
-
-            <div id="m-circulo"></div>
-
-            <div class="pe-custo">CUSTO: <span id="m-pe"></span> PE</div>
-            <p id="m-desc"></p>
+            <img id="m-img" src="" style="width: 85%; max-height: 240px; object-fit: contain; margin-bottom: 20px;">
+            <h2 id="m-nome" style="text-transform: uppercase; color: #fff; border: none; text-align: center;"></h2>
+            <div id="m-circulo" style="color: #aaa; font-size: 0.8rem; margin-bottom: 5px; text-transform: uppercase;"></div>
+            <div style="color: #d4af37; font-weight: bold; margin-bottom: 15px;">CUSTO: <span id="m-pe"></span> PE</div>
+            <p id="m-desc" style="color: #bbb; line-height: 1.6; text-align: justify;"></p>
         </div>
     </div>
 
     <script>
-        function abrir(nome, img, desc, elem, pe, circulo) {
+        function filtrarFonte(fonte, el) {
+            document.querySelectorAll('.capa-wrapper').forEach(w => w.classList.remove('active'));
+            el.classList.add('active');
+
+            document.querySelectorAll('.mini-card').forEach(card => {
+                const ritualFonte = card.getAttribute('data-fonte');
+                card.classList.toggle('hidden', fonte !== 'todos' && ritualFonte !== fonte);
+            });
+
+            document.querySelectorAll('.secao-elemento').forEach(secao => {
+                const visiveis = secao.querySelectorAll('.mini-card:not(.hidden)').length;
+                secao.style.display = (visiveis > 0) ? "block" : "none";
+            });
+        }
+
+        function abrir(nome, img, desc, elem, pe, circulo, inv) {
             document.getElementById('m-nome').innerText = nome;
             document.getElementById('m-desc').innerText = desc;
             document.getElementById('m-pe').innerText = pe;
-            document.getElementById('m-circulo').innerText = circulo; // Preenche o círculo
-            document.getElementById('m-img').src = '/static/' + img;
+            document.getElementById('m-circulo').innerText = circulo;
+            const mImg = document.getElementById('m-img');
+            const mBorder = document.getElementById('m-border');
 
-            // Cores dinâmicas para a borda do Modal
-            let cores = {
-                "Morte": "#333",
-                "Conhecimento": "#d4af37",
-                "Sangue": "#8b0000",
-                "Energia": "#9b30ff",
-                "Medo": "#fff"
-            };
+            mImg.src = '/static/' + img;
+            mImg.classList.toggle('invert-icon', inv);
 
-            document.getElementById('m-border').style.borderColor = cores[elem] || "#d4af37";
+            mBorder.classList.remove('dual-border');
+            mBorder.style.background = "";
+
+            if (elem === "Sangue/Conhecimento") {
+                mBorder.style.border = "none";
+                mBorder.classList.add('dual-border');
+            } else {
+                let cores = {"Morte": "#333", "Conhecimento": "#d4af37", "Sangue": "#8b0000", "Energia": "#9b30ff", "Medo": "#fff"};
+                mBorder.style.border = "3px solid " + (cores[elem] || "#d4af37");
+            }
             document.getElementById('ritualModal').style.display = "flex";
         }
-
-        function fechar(event) {
-            document.getElementById('ritualModal').style.display = "none";
-        }
+        function fechar(e) { document.getElementById('ritualModal').style.display = "none"; }
     </script>
 </body>
 </html>

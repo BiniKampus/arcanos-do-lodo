@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arcanos do Lodo - Terminal Restrito</title>
     <style>
-        /* Estilo Geral: Interface da Ordem */
         body {
             background-color: #050505;
             color: #e0e0e0;
@@ -18,134 +17,82 @@
             justify-content: center;
             height: 100vh;
             overflow: hidden;
+            /* Efeito de scanline no fundo */
+            background: radial-gradient(circle, #0a0a0a 0%, #050505 100%);
         }
 
-        /* TELA DE BOAS-VINDAS (OVERLAY) */
+        /* TELA DE BOAS-VINDAS */
         #welcome-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000;
-            color: #d4af37;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: opacity 1.5s ease-out; /* Fade-out suave */
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; color: #d4af37; z-index: 100;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 1.5s ease-out;
         }
 
         #welcome-text {
-            font-size: 1.6rem;
-            letter-spacing: 4px;
-            opacity: 0;
-            transition: opacity 1s;
-            padding: 20px;
-            text-transform: uppercase;
-            border: 1px solid #d4af37;
-            background: rgba(212, 175, 55, 0.05);
+            font-size: 1.6rem; letter-spacing: 4px; opacity: 0;
+            transition: opacity 1s; padding: 20px; text-transform: uppercase;
+            border: 2px solid #d4af37; box-shadow: 0 0 15px #d4af3744;
         }
 
         h1 {
-            color: #d4af37;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+            color: #d4af37; font-size: 1.4rem; margin-bottom: 20px;
             text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+            letter-spacing: 5px;
         }
 
-        /* CONTAINER DA CARTA 3D */
-        #card-container {
-            perspective: 1000px;
-            width: 300px;
-            height: 450px;
-            cursor: pointer;
-        }
-
+        /* CONTAINER DA CARTA */
+        #card-container { perspective: 1000px; width: 300px; height: 450px; cursor: pointer; }
         #card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative; width: 100%; height: 100%;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transform-style: preserve-3d;
         }
-
         .is-flipped { transform: rotateY(180deg); }
 
         .card-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 15px;
-            border: 3px solid #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            background: #111;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            position: absolute; width: 100%; height: 100%;
+            backface-visibility: hidden; border-radius: 15px;
+            border: 3px solid #333; display: flex; flex-direction: column;
+            justify-content: space-between; align-items: center;
+            padding: 25px; box-sizing: border-box; background: #111;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
         }
 
         .card-front {
-            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            background: linear-gradient(135deg, #151515 0%, #000000 100%);
             border-color: #d4af37;
         }
 
-        .simbolo-medo {
-            font-size: 5rem;
-            color: #d4af37;
-            margin-top: 80px;
-            opacity: 0.6;
+        .simbolo-medo { font-size: 5rem; color: #d4af37; margin-top: 80px; opacity: 0.8; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 0.8; } 100% { opacity: 0.4; } }
+
+        .card-back { transform: rotateY(180deg); background: #0a0a0a; border-width: 4px; }
+
+        /* BORDAS ESPECIAIS */
+        .dual-sangue-conhecimento {
+            border: 4px solid transparent !important;
+            background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                        linear-gradient(90deg, #8b0000 50%, #d4af37 50%) border-box !important;
         }
 
-        .card-back {
-            transform: rotateY(180deg);
-            background: #0a0a0a;
-            border-width: 4px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
+        #carta-img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #222; transition: 0.3s; }
+        .invert-icon { filter: invert(100%) drop-shadow(0 0 5px rgba(255,255,255,0.2)); }
 
-        #carta-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #222;
-        }
-
-        #carta-nome {
-            font-size: 1.4rem;
-            margin: 15px 0 5px 0;
-            color: #fff;
-            text-transform: uppercase;
-        }
+        #carta-nome { font-size: 1.4rem; margin: 15px 0 5px 0; color: #fff; text-transform: uppercase; font-weight: bold; }
 
         #elemento-label {
-            font-size: 0.75rem;
-            font-weight: bold;
-            padding: 6px 15px;
-            border-radius: 20px;
-            letter-spacing: 1px;
+            font-size: 0.7rem; font-weight: bold; padding: 6px 15px;
+            border-radius: 20px; letter-spacing: 2px; text-transform: uppercase;
         }
 
-        .instrucao {
-            margin-top: 30px;
-            color: #444;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
+        .instrucao { margin-top: 30px; color: #555; font-size: 0.8rem; letter-spacing: 2px; font-weight: bold; }
+        .canalizando { color: #d4af37; animation: flash 0.5s infinite; }
+        @keyframes flash { 50% { opacity: 0.5; } }
 
-        .voltar-link {
-            color: #d4af37;
-            text-decoration: none;
-            margin-top: 20px;
-            font-size: 0.8rem;
-            opacity: 0.5;
-            transition: 0.3s;
-        }
-        .voltar-link:hover { opacity: 1; }
+        .voltar-link { color: #d4af37; text-decoration: none; margin-top: 20px; font-size: 0.8rem; opacity: 0.6; transition: 0.3s; }
+        .voltar-link:hover { opacity: 1; text-shadow: 0 0 5px #d4af37; }
     </style>
 </head>
 <body>
@@ -160,22 +107,21 @@
         <div id="card-inner">
             <div class="card-face card-front">
                 <div class="simbolo-medo">⌬</div>
-                <p style="color: #d4af37; font-weight: bold;">CANALIZAR RITUAL</p>
+                <p id="status-text" style="color: #d4af37; font-weight: bold; letter-spacing: 2px;">CANALIZAR RITUAL</p>
             </div>
 
             <div class="card-face card-back" id="face-revelada">
-                <img id="carta-img" src="" alt="Arte do Ritual">
-                <h2 id="carta-nome">...</h2>
+                <img id="carta-img" src="" alt="Ritual">
+                <h2 id="carta-nome"></h2>
                 <div id="elemento-label"></div>
             </div>
         </div>
     </div>
 
-    <p class="instrucao">TOQUE NA CARTA PARA NOVO SORTEIO</p>
-    <a href="/" class="voltar-link">← RETORNAR AO TERMINAL UNIVERSITÁRIO</a>
+    <p class="instrucao" id="hint">TOQUE NA CARTA PARA NOVO SORTEIO</p>
+    <a href="/" class="voltar-link">← RETORNAR AO TERMINAL</a>
 
     <script>
-        // PROTOCOLO DE SEGURANÇA E BOAS-VINDAS
         window.onload = function() {
             const senhaCorreta = "SorteMaldita";
             const tentativa = prompt("SISTEMA RESTRITO: INSIRA A CREDENCIAL");
@@ -184,16 +130,14 @@
                 const nomeAgente = prompt("IDENTIFIQUE-SE, AGENTE:");
                 const overlay = document.getElementById('welcome-overlay');
                 const text = document.getElementById('welcome-text');
-
-                text.innerText = `BEM-VINDO, AGENTE ${nomeAgente.toUpperCase()}`;
-                text.style.opacity = "1";
-
-                // Fade-out do overlay
+                if (nomeAgente) {
+                    text.innerText = `AGENTE ${nomeAgente.toUpperCase()} AUTORIZADO`;
+                    text.style.opacity = "1";
+                }
                 setTimeout(() => {
                     overlay.style.opacity = "0";
                     setTimeout(() => overlay.style.display = "none", 1500);
                 }, 1800);
-
             } else {
                 window.location.href = "/erro";
             }
@@ -205,44 +149,60 @@
             const cardInner = document.getElementById('card-inner');
             const faceBack = document.getElementById('face-revelada');
             const label = document.getElementById('elemento-label');
+            const imgEl = document.getElementById('carta-img');
+            const statusText = document.getElementById('status-text');
 
             if (girado) {
                 cardInner.classList.remove('is-flipped');
+                statusText.innerText = "CANALIZAR RITUAL";
+                statusText.classList.remove('canalizando');
                 girado = false;
                 return;
             }
 
+            // Efeito visual de carregamento
+            statusText.innerText = "CANALIZANDO...";
+            statusText.classList.add('canalizando');
+
             fetch('/sortear')
-                .then(response => response.json())
+                .then(res => res.json())
                 .then(data => {
-                    document.getElementById('carta-img').src = '/static/' + data.img;
+                    imgEl.src = '/static/' + data.img;
                     document.getElementById('carta-nome').innerText = data.nome;
-                    label.innerText = data.elemento.toUpperCase();
 
-                    // Definição de cores por elemento
-                    let cores = {
-                        "Morte": "#1A1A1B",
-                        "Conhecimento": "#d4af37",
-                        "Sangue": "#8b0000",
-                        "Energia": "#4b0082",
-                        "Medo": "#ffffff"
-                    };
+                    // Reset
+                    faceBack.classList.remove('dual-sangue-conhecimento');
+                    label.style.background = "";
+                    imgEl.classList.toggle('invert-icon', data.invertir === true);
 
-                    let cor = cores[data.elemento] || "#333";
-
-                    faceBack.style.borderColor = cor;
-                    faceBack.style.boxShadow = `0 0 25px ${cor}88`;
-                    label.style.backgroundColor = cor;
-
-                    // Ajusta a cor do texto para elementos claros
-                    label.style.color = (data.elemento === "Conhecimento" || data.elemento === "Medo") ? "black" : "white";
+                    if (data.elemento === "Sangue/Conhecimento") {
+                        faceBack.classList.add('dual-sangue-conhecimento');
+                        faceBack.style.boxShadow = `0 0 30px rgba(212, 175, 55, 0.4)`;
+                        label.innerText = "SANGUE / CONHECIMENTO";
+                        label.style.background = "linear-gradient(90deg, #8b0000 50%, #d4af37 50%)";
+                        label.style.color = "white";
+                    } else {
+                        label.innerText = data.elemento.toUpperCase();
+                        const cores = {
+                            "Morte": "#1A1A1B",
+                            "Conhecimento": "#d4af37",
+                            "Sangue": "#8b0000",
+                            "Energia": "#9b30ff",
+                            "Medo": "#ffffff"
+                        };
+                        const cor = cores[data.elemento] || "#333";
+                        faceBack.style.borderColor = cor;
+                        faceBack.style.boxShadow = `0 0 30px ${cor}88`;
+                        label.style.backgroundColor = cor;
+                        label.style.color = (data.elemento === "Conhecimento" || data.elemento === "Medo") ? "black" : "white";
+                    }
 
                     cardInner.classList.add('is-flipped');
                     girado = true;
                 })
                 .catch(err => {
-                    console.error(err);
-                    alert("CONEXÃO INTERROMPIDA. Verifique o servidor.");
+                    statusText.innerText = "ERRO NA CONEXÃO";
+                    alert("O Outro Lado interferiu na conexão.");
                 });
         }
     </script>
