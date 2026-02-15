@@ -41,9 +41,6 @@
             background: linear-gradient(45deg, #0a0a0a 25%, #151515 25%, #151515 50%, #0a0a0a 50%, #0a0a0a 75%, #151515 75%, #151515 100%);
             background-size: 40px 40px;
         }
-        .face-verso::after {
-            content: "ORAL"; color: #d4af37; font-size: 3rem; font-weight: bold; opacity: 0.1; transform: rotate(-45deg);
-        }
 
         /* FRENTE DA CARTA (Revelada) */
         .face-frente { transform: rotateY(180deg); padding: 10px; box-sizing: border-box; }
@@ -116,7 +113,7 @@
                     // Preenche os dados antes de girar
                     document.getElementById('carta-img').src = '/static/' + data.img;
                     document.getElementById('carta-nome').innerText = data.nome;
-                    document.getElementById('carta-significado').innerText = data.significado.upperCase;
+                    document.getElementById('carta-significado').innerText = data.significado;
                     document.getElementById('carta-desc').innerText = data.desc;
 
                     // Gira a carta e mostra o texto
