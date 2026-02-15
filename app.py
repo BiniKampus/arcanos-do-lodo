@@ -5,14 +5,14 @@ app = Flask(__name__)
 
 # Aqui é o seu estoque de cartas.
 # "img" precisa ser o nome exato da imagem que está na pasta 'static'
-meu_deck = [
+meu_deck_novo = [
     {"nome": "Amaldiçoar Arma", "img": "AmaldiçoarArma.png","fonte": "livro", "elemento": "Energia", "circulo": "1ºCírculo", "pe": 1, "desc":"Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"},
     #{"nome": "Florescer Caótico", "img": "florescer-caotico.png", "elemento": "Energia", "circulo": "1ºCírculo", "pe": 1, "desc":Quando não se sabe o que fazer, deixe na mão do Outro Lado. Três raios saem do seu peito e acertam alvos aleatórios a sua volta, para cada raio você deve rolar um d20, caso o resultado sair 10 ou menor ele acerta um aliado (a critério do mestre) e caso seja maior acerta um inimigo a sua escolha, caso não haja alvos disponíveis, o disparo é descartado. Um inimigo não pode ser acertado por mais de um raio. O raio causa 3d10+5 de Energia."},
     {"nome": "Cauterização Caótica", "img": "cicatrizacao.png", "elemento": "Energia", "circulo": "1ºCírculo", "pe": 1, "desc":"Estática e efeitos luminosos e sonoros surgem ao redor de um alvo. O alvo recupera 1d6+1 PV no início do turno dele, mas o caos adora se divertir, ao receber a cura também role 1d6 para um dos efeitos a seguir. Usar novamente dissipar uso anterior. (1): Dobra a quantidade de cura recebida. (2): O alvo fica ofuscado até o início do próximo turno. (3): Causa +1d6 de dano de energia no seu primeiro ataque da rodada. (4): O alvo não pode usar reações especiais até o início do próximo turno. (5): Recebe +2 no teste de acerto e -2 de Defesa e RD. (6): O alvo não pode gastar PD até o início do próximo turno."},
     {"nome": "Coincidência Forçada", "img": "coincidencia-forcada.png","fonte": "livro", "elemento": "Energia", "circulo": "1ºCírculo", "pe": 1, "desc": "Recebe bônus em testes.(Para melhor descrição abra o livro de regras na página 126)"},
     {"nome": "Eletrocussão", "img": "eletrocussao.png","fonte": "livro", "elemento": "Energia", "circulo": "1ºCírculo", "pe": 1, "desc":"Corrente voltaica eletrocuta o alvo.(Para melhor descrição abra o livro de regras na página 131)"},
 ]
-meu_deck_80 = [
+meu_deck = [
     {"nome": "Amaldiçoar Arma", "img": "AmaldiçoarArma.png","fonte": "livro", "elemento": "Morte", "circulo": "1ºCírculo", "pe": 1, "desc":"Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"},
     {"nome": "Cicatrização", "img": "cicatrizacao.png","fonte": "livro", "elemento": "Morte", "circulo": "1ºCírculo", "pe": 1, "desc":"Você acelera o tempo ao redor das feridas do alvo, que cicatrizam instantaneamente. O alvo recupera 3d8+3 PV, mas envelhece 1 ano automaticamente.. (Para melhor descrição abra o livro de regras na página 126)"},
     {"nome": "Decadência", "img": "decadencia.png","fonte": "livro", "elemento": "Morte", "circulo": "1ºCírculo", "pe": 1, "desc":"Espirais de trevas envolvem sua mão e definham o alvo, que sofre 2d8+2 pontos de dano de Morte. (Para melhor descrição abra o livro de regras na página 129)"},
@@ -219,7 +219,7 @@ catalogo_geral = [
 
 # 3. UNIÃO DAS LISTAS PARA A GALERIA
 # O Python soma as duas listas automaticamente para criar a biblioteca completa.
-todos_rituais = meu_deck_80 + catalogo_geral
+todos_rituais = meu_deck + catalogo_geral
 
 @app.route('/')
 def home():
@@ -241,7 +241,7 @@ def erro():
 @app.route('/sortear')
 def sortear():
     # O Sorteador puxa APENAS do seu deck pessoal
-    return jsonify(random.choice(meu_deck))
+    return jsonify(random.choice(meu_deck_novo))
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
