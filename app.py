@@ -18,8 +18,8 @@ def carregar_dados(arquivo):
 
 # --- CARREGAMENTO DOS DECKS (OCUPA APENAS 4 LINHAS AGORA!) ---
 # Certifique-se de que os nomes dos arquivos .json sejam exatamente esses no seu PyCharm
-meu_deck_80 = carregar_dados('deck_novo.json')
-meu_deck = carregar_dados('rituais.json')
+meu_deck_80 = carregar_dados('rituais.json')
+meu_deck = carregar_dados('deck_novo.json')
 catalogo_geral = carregar_dados('catalogo_geral.json')
 cartas_tarot = carregar_dados('tarot.json')
 
