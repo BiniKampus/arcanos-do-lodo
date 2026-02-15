@@ -241,7 +241,8 @@ def erro():
 @app.route('/sortear')
 def sortear():
     # O Sorteador puxa APENAS do seu deck pessoal
-    return jsonify(random.choice(meu_deck_novo))
+    ritual_sorteado = random.choice(meu_deck)
+    return jsonify(ritual_sorteado)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
