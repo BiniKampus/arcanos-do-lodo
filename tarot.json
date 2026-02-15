@@ -2,133 +2,133 @@
   {
     "nome": "0 - O Louco",
     "img": "tarot/tarot_louco.png",
-    "desc": "O salto no abismo. Um início sem medo, onde a inocência é a única proteção contra o desconhecido.",
+    "desc": "O salto no abismo. Um início sem medo, onde a inocência é a única proteção.",
     "significado": "Novos Começos, Espontaneidade"
   },
   {
     "nome": "I - O Mago",
     "img": "tarot/tarot_mago.png",
-    "desc": "Tudo o que é necessário está sobre a mesa. A vontade humana moldando a Realidade através dos elementos.",
+    "desc": "A vontade humana moldando a Realidade através dos elementos.",
     "significado": "Poder, Manifestação, Habilidade"
   },
   {
     "nome": "II - A Sacerdotisa",
     "img": "tarot/tarot_sacerdotisa.png",
-    "desc": "O que está oculto entre as colunas do conhecimento. O silêncio que precede a revelação paranormal.",
+    "desc": "O que está oculto entre as colunas do conhecimento.",
     "significado": "Intuição, Mistério, Paciência"
   },
   {
     "nome": "III - A Imperatriz",
     "img": "tarot/tarot_imperatriz.png",
-    "desc": "A força geradora da natureza. Onde o Lodo encontra a vida, criando abundância e proteção.",
+    "desc": "A força geradora da natureza. Onde o Lodo encontra a vida.",
     "significado": "Fertilidade, Natureza, Abundância"
   },
   {
     "nome": "IV - O Imperador",
     "img": "tarot/tarot_imperador.png",
-    "desc": "A estrutura que mantém a ordem contra o caos. Autoridade imposta pela força e pela razão.",
+    "desc": "A estrutura que mantém a ordem contra o caos.",
     "significado": "Autoridade, Estrutura, Controle"
   },
   {
     "nome": "V - O Papa",
     "img": "tarot/tarot_papa.png",
-    "desc": "O mestre que interpreta os sussurros do Outro Lado. Conhecimento sagrado passado através das eras.",
+    "desc": "O mestre que interpreta os sussurros do Outro Lado.",
     "significado": "Tradição, Conselho, Espiritualidade"
   },
   {
     "nome": "VI - Os Enamorados",
     "img": "tarot/tarot_enamorados.png",
-    "desc": "O peso de uma escolha. Dois caminhos, uma alma e a harmonia que surge da decisão correta.",
+    "desc": "O peso de uma escolha. Dois caminhos, uma alma.",
     "significado": "Escolhas, Relacionamentos, Valores"
   },
   {
     "nome": "VII - A Carruagem",
     "img": "tarot/tarot_carruagem.png",
-    "desc": "A vitória alcançada pelo domínio da vontade. Conduzir forças opostas em uma única direção.",
+    "desc": "A vitória alcançada pelo domínio da vontade.",
     "significado": "Determinação, Vitória, Controle"
   },
   {
     "nome": "VIII - A Força",
     "img": "tarot/tarot_forca.png",
-    "desc": "Não o músculo, mas o espírito. Domar a fera interna com coragem e compaixão absoluta.",
+    "desc": "Domar a fera interna com coragem e compaixão.",
     "significado": "Coragem, Autocontrole, Persuasão"
   },
   {
     "nome": "IX - O Eremita",
     "img": "tarot/tarot_eremita.png",
-    "desc": "A lanterna que brilha na escuridão da alma. A sabedoria encontrada apenas no isolamento e na introspecção.",
+    "desc": "A lanterna que brilha na escuridão da alma.",
     "significado": "Solitude, Reflexão, Busca Interior"
   },
   {
     "nome": "X - A Roda da Fortuna",
     "img": "tarot/tarot_roda.png",
-    "desc": "O giro constante da Realidade. O que estava no topo cai, e o que estava embaixo ascende pelo destino.",
+    "desc": "O giro constante da Realidade. Ciclos inevitáveis.",
     "significado": "Ciclos, Mudança, Sorte"
   },
   {
     "nome": "XI - A Justiça",
     "img": "tarot/tarot_justica.png",
-    "desc": "A balança que nunca erra. Causa e efeito manifestados com clareza e verdade cortante.",
+    "desc": "A balança que nunca erra. Causa e efeito.",
     "significado": "Equilíbrio, Verdade, Lei"
   },
   {
     "nome": "XII - O Enforcado",
     "img": "tarot/tarot_enforcado.png",
-    "desc": "Ver o mundo sob uma nova perspectiva. O sacrifício voluntário necessário para alcançar a iluminação.",
+    "desc": "O sacrifício necessário para alcançar a iluminação.",
     "significado": "Pausa, Entrega, Nova Visão"
   },
   {
     "nome": "XIII - A Morte",
     "img": "tarot/tarot_morte.png",
-    "desc": "O ceifador de ciclos. Não um fim, mas a transição inevitável e o renascimento das cinzas do passado.",
+    "desc": "O encerramento de um ciclo e a transformação.",
     "significado": "Fim, Transição, Renovação"
   },
   {
     "nome": "XIV - A Temperança",
     "img": "tarot/tarot_temperanca.png",
-    "desc": "A alquimia da paciência. Misturar opostos para criar um equilíbrio estável no meio do caos paranormal.",
+    "desc": "Misturar opostos para criar um equilíbrio estável.",
     "significado": "Moderação, Equilíbrio, Alquimia"
   },
   {
     "nome": "XV - O Diabo",
     "img": "tarot/tarot_diabo.png",
-    "desc": "As correntes que nós mesmos forjamos. O vício, a tentação e o poder que escraviza o espírito.",
+    "desc": "As correntes que nós mesmos forjamos. O vício e a sombra.",
     "significado": "Sombra, Tentação, Apego"
   },
   {
     "nome": "XVI - A Torre",
     "img": "tarot/tarot_torre.png",
-    "desc": "A queda das mentiras. Uma revelação súbita e destrutiva que derruba estruturas obsoletas da Realidade.",
+    "desc": "A queda das mentiras e a revelação súbita.",
     "significado": "Desastre, Mudança Súbita, Ruína"
   },
   {
     "nome": "XVII - A Estrela",
     "img": "tarot/tarot_estrela.png",
-    "desc": "A luz que guia na noite mais profunda. Esperança renovada e a serenidade após a tempestade de Medo.",
+    "desc": "A luz que guia na noite mais profunda. Esperança.",
     "significado": "Esperança, Inspiração, Serenidade"
   },
   {
     "nome": "XVIII - A Lua",
     "img": "tarot/tarot_lua.png",
-    "desc": "O reino das sombras e das ilusões. Onde o subconsciente sussurra verdades que a luz do Sol esconde.",
+    "desc": "O reino das sombras, ilusões e do subconsciente.",
     "significado": "Ilusão, Medo, Subconsciente"
   },
   {
     "nome": "XIX - O Sol",
     "img": "tarot/tarot_sol.png",
-    "desc": "A clareza absoluta da verdade. Vitalidade, sucesso e a luz que dissipa qualquer sombra paranormal.",
+    "desc": "A clareza absoluta da verdade e vitalidade.",
     "significado": "Vitalidade, Sucesso, Alegria"
   },
   {
     "nome": "XX - O Julgamento",
     "img": "tarot/tarot_julgamento.png",
-    "desc": "O chamado para o despertar. Uma avaliação final de todas as ações antes da transição definitiva.",
+    "desc": "O chamado para o despertar e a absolvição.",
     "significado": "Absolvição, Chamado, Renascimento"
   },
   {
     "nome": "XXI - O Mundo",
     "img": "tarot/tarot_mundo.png",
-    "desc": "A completude do ciclo. A integração final de todas as lições em uma dança perfeita com a Realidade.",
+    "desc": "A completude do ciclo e a integração final.",
     "significado": "Sucesso, Viagem, Realização"
   }
 ]
