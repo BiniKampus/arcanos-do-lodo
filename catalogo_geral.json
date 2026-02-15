@@ -1,0 +1,784 @@
+[
+  {
+    "nome": "Amaldiçoar Arma",
+    "img": "AmaldiçoarArma.png",
+    "fonte": "livro",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Amaldiçoar Arma",
+    "img": "AmaldiçoarArma.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Amaldiçoar Arma",
+    "img": "AmaldiçoarArma.png",
+    "fonte": "livro",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Amaldiçoar Tecnologia",
+    "invertir": true,
+    "img": "amaldicoar-tecnologia.png",
+    "fonte": "livro",
+    "circulo": "1ºCírculo",
+    "elemento": "Energia",
+    "pe": 1,
+    "desc": "Aprimora um item.(Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Arma Atroz",
+    "img": "arma-atroz.png",
+    "fonte": "livro",
+    "circulo": "1ºCírculo",
+    "elemento": "Sangue",
+    "pe": 1,
+    "desc": "Arma corpo a corpo recebe bônus em testes de ataque e margem de ameaça.(Para melhor descrição abra o livro de regras na página 125)"
+  },
+  {
+    "nome": "Armadura de Sangue",
+    "img": "armadura-de-sangue.png",
+    "fonte": "livro",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Recobre o corpo com placas de sangue endurecido.(Para melhor descrição abra o livro de regras na página 125)"
+  },
+  {
+    "nome": "Cinerária",
+    "img": "cineraria.png",
+    "fonte": "livro",
+    "elemento": "Medo",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Névoa fortalece rituais na área.(Para melhor descrição abra o livro de regras na página 126)"
+  },
+  {
+    "nome": "Coincidência Forçada",
+    "img": "coincidencia-forcada.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Recebe bônus em testes.(Para melhor descrição abra o livro de regras na página 126)"
+  },
+  {
+    "nome": "Compreensão Paranormal",
+    "fonte": "livro",
+    "img": "compreensao-paranormal.png",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você entende qualquer linguagem escrita ou falada.(Para melhor descrição abra o livro de regras na página 126)"
+  },
+  {
+    "nome": "Consumir Manancial",
+    "fonte": "livro",
+    "img": "consumir-manancial.png",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Suga o tempo de vida de seres próximos, recebendo PV temporários.(Para melhor descrição abra o livro de regras na página 127)"
+  },
+  {
+    "nome": "Corpo Adaptado",
+    "fonte": "livro",
+    "img": "corpo-adaptado.png",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Ignora frio e calor, pode respirar debaixo d'água.(Para melhor descrição abra o livro de regras na página 128)"
+  },
+  {
+    "nome": "Definhar",
+    "fonte": "livro",
+    "img": "definhar.png",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Alvo fica fatigado ou vulnerável.(Para melhor descrição abra o livro de regras na página 129)"
+  },
+  {
+    "nome": "Distorcer Aparência",
+    "fonte": "livro",
+    "img": "distorcer-aparencia.png",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Muda a aparência de um ou mais alvos.(Para melhor descrição abra o livro de regras na página 130)"
+  },
+  {
+    "nome": "Embaralhar",
+    "fonte": "livro",
+    "img": "embaralhar.png",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Cria duplicatas para confundir os inimigos.(Para melhor descrição abra o livro de regras na página 131)"
+  },
+  {
+    "nome": "Enfeitiçar",
+    "fonte": "livro",
+    "img": "enfeiticar.png",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Alvo se torna prestativo.(Para melhor descrição abra o livro de regras na página 131)"
+  },
+  {
+    "nome": "Fortalecimento Sensorial",
+    "fonte": "livro",
+    "img": "fortalecimento-sensorial.png",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Melhora seus sentidos e sua percepção.(Para melhor descrição abra o livro de regras na página 133)"
+  },
+  {
+    "nome": "Luz",
+    "img": "luz.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Objeto brilha como uma lâmpada.(Para melhor descrição abra o livro de regras na página 135)"
+  },
+  {
+    "nome": "Nuvem de Cinzas",
+    "fonte": "livro",
+    "img": "nuvem-de-cinzas.png",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Nuvem fornece camuflagem.(Para melhor descrição abra o livro de regras na página 136)"
+  },
+  {
+    "nome": "Ódio Incontrolável",
+    "fonte": "livro",
+    "img": "odio-incontrolavel.png",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Aumenta dano corpo a corpo e perícias físicas.(Para melhor descrição abra o livro de regras na página 136)"
+  },
+  {
+    "nome": "Ouvir os Sussurros",
+    "fonte": "livro",
+    "img": "ouvir-os-sussurros.png",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você se comunica com vozes do Outro Lado.(Para melhor descrição abra o livro de regras na página 137)"
+  },
+  {
+    "nome": "Polarização Caotica",
+    "fonte": "livro",
+    "img": "polarizacao-caotica.png",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Objetos metálicos são atraídos ou repelidos.(Para melhor descrição abra o livro de regras na página 138)"
+  },
+  {
+    "nome": "Tecer Ilusão",
+    "fonte": "livro",
+    "img": "tecer-ilusao.png",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Cria uma ilusão visual ou sonora.(Para melhor descrição abra o livro de regras na página 140)"
+  },
+  {
+    "nome": "Terceiro Olho",
+    "fonte": "livro",
+    "img": "terceiro-olho.png",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você vê manifestações paranormais.(Para melhor descrição abra o livro de regras na página 141)"
+  },
+  {
+    "nome": "Aprimorar Físico",
+    "fonte": "livro",
+    "img": "aprimorar-fisico.png",
+    "elemento": "Sangue",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Bônus em Agilidade ou Força.(Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Aprimorar Mente",
+    "fonte": "livro",
+    "img": "aprimorar-mente.png",
+    "elemento": "Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Fornece bônus em Intelecto ou Presença.(Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Chamas do Caos",
+    "fonte": "livro",
+    "img": "chamas-do-caos.png",
+    "elemento": "Energia",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Controla o fogo.(Para melhor descrição abra o livro de regras na página 126)"
+  },
+  {
+    "nome": "Contenção Fantasmagórica",
+    "fonte": "livro",
+    "img": "contencao-fantasmagorica.png",
+    "elemento": "Energia",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Laços de energia prendem o alvo.(Para melhor descrição abra o livro de regras na página 127)"
+  },
+  {
+    "nome": "Detecção de Ameaças",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "deteccao-de-ameacas.png",
+    "elemento": "Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Detecta seres hostis e armadilhas na área.(Para melhor descrição abra o livro de regras na página 130)"
+  },
+  {
+    "nome": "Dissonância Acústica",
+    "fonte": "livro",
+    "img": "dissonancia-acustica.png",
+    "elemento": "Energia",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Cria uma área em que é impossível ouvir sons.(Para melhor descrição abra o livro de regras na página 130)"
+  },
+  {
+    "nome": "Esconder os Olhos",
+    "fonte": "livro",
+    "img": "esconder-os-olhos.png",
+    "elemento": "Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Torna o usuário invisível aos olhos comuns.(Para melhor descrição abra o livro de regras na página 132)"
+  },
+  {
+    "nome": "Flagelo de Sangue",
+    "fonte": "livro",
+    "img": "flagelo-de-sangue.png",
+    "elemento": "Sangue",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Alvo precisa obedecer uma ordem.(Para melhor descrição abra o livro de regras na página 133)"
+  },
+  {
+    "nome": "Localização",
+    "fonte": "livro",
+    "img": "localizacao.png",
+    "elemento": "Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Determina a direção de um objeto ou ser.(Para melhor descrição abra o livro de regras na página 135)"
+  },
+  {
+    "nome": "Miasma Entrópico",
+    "fonte": "livro",
+    "img": "miasma-entropico.png",
+    "elemento": "Morte",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Nuvem tóxica enjoa e sufoca os alvos.(Para melhor descrição abra o livro de regras na página 136)"
+  },
+  {
+    "nome": "Paradoxo",
+    "fonte": "livro",
+    "img": "paradoxo.png",
+    "elemento": "Morte",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Cria uma área de tempo capaz de envelhecer corpo e alma.(Para melhor descrição abra o livro de regras na página 137)"
+  },
+  {
+    "nome": "Proteção contra Rituais",
+    "fonte": "livro",
+    "img": "protecao-contra-rituais.png",
+    "elemento": "Medo",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Alvo recebe resistência contra efeitos paranormais.(Para melhor descrição abra o livro de regras na página 139)"
+  },
+  {
+    "nome": "Rejeitar Névoa",
+    "fonte": "livro",
+    "img": "rejeitar-nevoa.png",
+    "elemento": "Medo",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Enfraquece a conjuração de rituais.(Para melhor descrição abra o livro de regras na página 139)"
+  },
+  {
+    "nome": "Sopro do Caos",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "sopro-do-caos.png",
+    "elemento": "Energia",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Move o ar de formas impossíveis.(Para melhor descrição abra o livro de regras na página 140)"
+  },
+  {
+    "nome": "Transfusão Vital",
+    "fonte": "livro",
+    "img": "transfusao-vital.png",
+    "elemento": "Sangue",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Transfere vida do usuário para um ser.(Para melhor descrição abra o livro de regras na página 142)"
+  },
+  {
+    "nome": "Velocidade Mortal",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "velocidade-mortal.png",
+    "elemento": "Morte",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Alvo acelera no tempo, realizando ações adicionais.(Para melhor descrição abra o livro de regras na página 142)"
+  },
+  {
+    "nome": "Alterar Memória",
+    "img": "alterar-memoria.png",
+    "fonte": "livro",
+    "elemento": "Conhecimento",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Pode apagar ou modificar a memória recente do alvo.(Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Âncora Temporal",
+    "fonte": "livro",
+    "img": "ancora-temporal.png",
+    "elemento": "Morte",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Impede o alvo de se afastar de um ponto.(Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Contato Paranormal",
+    "fonte": "livro",
+    "img": "contato-paranormal.png",
+    "elemento": "Conhecimento",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Você barganha com o Outro Lado para obter ajuda.(Para melhor descrição abra o livro de regras na página 127)"
+  },
+  {
+    "nome": "Convocação Instantânea",
+    "fonte": "livro",
+    "img": "convocacao-instantanea.png",
+    "elemento": "Energia",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Teletransporta um objeto marcado para suas mãos.(Para melhor descrição abra o livro de regras na página 128)"
+  },
+  {
+    "nome": "Dissipar Ritual",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "dissipar-ritual.png",
+    "elemento": "Medo",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Cancela os efeitos de rituais em um alvo ou área.(Para melhor descrição abra o livro de regras na página 130)"
+  },
+  {
+    "nome": "Forma Monstruosa",
+    "fonte": "livro",
+    "img": "forma-monstruosa.png",
+    "elemento": "Sangue",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Você assume a aparência de uma criatura monstruosa.(Para melhor descrição abra o livro de regras na página 133)"
+  },
+  {
+    "nome": "Poeira da Podridão",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "poeira-da-podridao.png",
+    "elemento": "Morte",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Nuvem de poeira apodrece tudo que toca.(Para melhor descrição abra o livro de regras na página 138)"
+  },
+  {
+    "nome": "Transfigurar Água",
+    "fonte": "livro",
+    "img": "transfigurar-agua.png",
+    "elemento": "Energia",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Água e gelo se comportam de forma caótica.(Para melhor descrição abra o livro de regras na página 142)"
+  },
+  {
+    "nome": "Transfigurar Terra",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "transfigurar-terra.png",
+    "elemento": "Energia",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Rochas, lama e areia se comportam de forma caótica.(Para melhor descrição abra o livro de regras na página 142)"
+  },
+  {
+    "nome": "Vidência",
+    "fonte": "livro",
+    "img": "videncia.png",
+    "elemento": "Conhecimento",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Pode observar e ouvir um alvo à distância.(Para melhor descrição abra o livro de regras na página 143)"
+  },
+  {
+    "nome": "Vomitar Pestes",
+    "fonte": "livro",
+    "img": "vomitar-pestes.png",
+    "elemento": "Sangue",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Vomita um enxame de pequenas criaturas de Sangue.(Para melhor descrição abra o livro de regras na página 143)"
+  },
+  {
+    "nome": "Alterar Destino",
+    "fonte": "livro",
+    "img": "alterar-destino.png",
+    "elemento": "Energia",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Enxerga o futuro próximo, podendo alterar um resultado.(Para melhor descrição abra o livro de regras na página 125)"
+  },
+  {
+    "nome": "Canalizar o Medo",
+    "fonte": "livro",
+    "img": "canalizar-o-medo.png",
+    "elemento": "Medo",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Transfere parte de seu poder paranormal para um alvo.(Para melhor descrição abra o livro de regras na página 125)"
+  },
+  {
+    "nome": "Capturar o Coração",
+    "fonte": "livro",
+    "img": "capturar-o-coracao.png",
+    "elemento": "Sangue",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Manipula as emoções e vontades do alvo.(Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Conhecendo o Medo",
+    "fonte": "livro",
+    "img": "conhecendo-o-medo.png",
+    "elemento": "Medo",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Manifesta o Medo absoluto na mente do alvo.(Para melhor descrição abra o livro de regras na página 127)"
+  },
+  {
+    "nome": "Controle Mental",
+    "fonte": "livro",
+    "img": "controle-mental.png",
+    "elemento": "Conhecimento",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Faz com que a mente da vítima seja controlada.(Para melhor descrição abra o livro de regras na página 128)"
+  },
+  {
+    "nome": "Convocar o Algoz",
+    "invertir": true,
+    "fonte": "livro",
+    "img": "convocar-o-algoz.png",
+    "elemento": "Morte",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Conjura o maior medo do alvo para persegui-lo.(Para melhor descrição abra o livro de regras na página 128)"
+  },
+  {
+    "nome": "Distorção Temporal",
+    "fonte": "livro",
+    "img": "distorcao-temporal.png",
+    "elemento": "Morte",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Você age livremente por um curto período de tempo.(Para melhor descrição abra o livro de regras na página 130)"
+  },
+  {
+    "nome": "Fim Inevitável",
+    "fonte": "livro",
+    "img": "fim-inevitavel.png",
+    "elemento": "Morte",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Abre uma ruptura no espaço que suga tudo ao redor.(Para melhor descrição abra o livro de regras na página 132)"
+  },
+  {
+    "nome": "Inexistir",
+    "fonte": "livro",
+    "img": "inexistir.png",
+    "elemento": "Conhecimento",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Você toca um alvo e o apaga da existência.(Para melhor descrição abra o livro de regras na página 134)"
+  },
+  {
+    "nome": "Invólucro de Carne",
+    "fonte": "livro",
+    "img": "involucro-de-carne.png",
+    "elemento": "Sangue",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Cria um clone de carne e sangue.(Para melhor descrição abra o livro de regras na página 134)"
+  },
+  {
+    "nome": "Lâmina do Medo",
+    "fonte": "livro",
+    "img": "lamina-do-medo.png",
+    "elemento": "Medo",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Golpeia o alvo com uma lâmina de medo puro.(Para melhor descrição abra o livro de regras na página 135)"
+  },
+  {
+    "nome": "Medo Tangível",
+    "fonte": "livro",
+    "img": "medo-tangivel.png",
+    "elemento": "Medo",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Recebe uma série de imunidades paranormais.(Para melhor descrição abra o livro de regras na página 135)"
+  },
+  {
+    "nome": "Possessão",
+    "fonte": "livro",
+    "img": "possessao.png",
+    "elemento": "Conhecimento",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Transfere sua consciência para o corpo do alvo.(Para melhor descrição abra o livro de regras na página 138)"
+  },
+  {
+    "nome": "Presença do Medo",
+    "fonte": "livro",
+    "img": "presenca-do-medo.png",
+    "elemento": "Medo",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Você assume uma forma impossível dentro da realidade.(Para melhor descrição abra o livro de regras na página 139)"
+  },
+  {
+    "nome": "Teletransporte",
+    "fonte": "livro",
+    "img": "teletransporte.png",
+    "elemento": "Energia",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Teletransporta você e outros seres.(Para melhor descrição abra o livro de regras na página 141)"
+  },
+  {
+    "nome": "Vínculo de Sangue",
+    "fonte": "livro",
+    "img": "vinculo-de-sangue.png",
+    "elemento": "Sangue",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Alvo sofre todo dano que você sofrer.(Para melhor descrição abra o livro de regras na página 143)"
+  },
+  {
+    "nome": "Esfolar",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "esfolar.png",
+    "elemento": "Sangue",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você usa seu corpo como passagem para o Sangue. (Suplemento Sobrevivendo ao Horror Pág. 48)"
+  },
+  {
+    "nome": "Apagar as Luzes",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "apagar-as-luzes.png",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Qualquer fonte de luz natural ou paranormal se apaga. (Suplemento Sobrevivendo ao Horror Pág. 50)"
+  },
+  {
+    "nome": "Desfazer Sinapses",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "desfazer-sinapses.png",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Inexiste bilhões de neurônios no cérebro do alvo. (Suplemento Sobrevivendo ao Horror Pág. 53)"
+  },
+  {
+    "nome": "Overclock",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "overclock.png",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Usa descargas de Energia para forçar aparelhos eletrônicos. (Suplemento Sobrevivendo ao Horror Pág. 55)"
+  },
+  {
+    "nome": "Sede de Adrenalina",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "sede-de-adrenalina.png",
+    "elemento": "Sangue",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Repete teste de Acrobacia ou Atletismo usando Presença. (Suplemento Sobrevivendo ao Horror Pág. 49)"
+  },
+  {
+    "nome": "Lingua Morta",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "lingua-morta.png",
+    "elemento": "Morte",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Reanima cadáveres forçadamente com Lodo da Morte. (Suplemento Sobrevivendo ao Horror Pág. 51)"
+  },
+  {
+    "nome": "Aurora da Verdade",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "aurora-da-verdade.png",
+    "elemento": "Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Luz obriga todos na área a falarem a verdade. (Suplemento Sobrevivendo ao Horror Pág. 53)"
+  },
+  {
+    "nome": "Tremeluzir",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "tremeluzir.png",
+    "elemento": "Energia",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Capaz de atravessar objetos sólidos. (Suplemento Sobrevivendo ao Horror Pág. 55)"
+  },
+  {
+    "nome": "Odor da Caçada",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "odor-da-cacada.png",
+    "elemento": "Sangue",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Intensifica odores e sentidos de caçador. (Suplemento Sobrevivendo ao Horror Pág. 49)"
+  },
+  {
+    "nome": "Fedor Pútrido",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "fedor-putrido.png",
+    "elemento": "Morte",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Corpo sustentado temporariamente pelo Lodo da Morte. (Suplemento Sobrevivendo ao Horror Pág. 52)"
+  },
+  {
+    "nome": "Relembrar Fragmento",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "relembrar-fragmento.png",
+    "elemento": "Conhecimento",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Restaura objeto para momento anterior de anotação. (Suplemento Sobrevivendo ao Horror Pág. 54)"
+  },
+  {
+    "nome": "Mutar",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "mutar.png",
+    "elemento": "Energia",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Concede bônus massivo em Furtividade. (Suplemento Sobrevivendo ao Horror Pág. 56)"
+  },
+  {
+    "nome": "Martírio de Sangue",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "martirio-de-sangue.png",
+    "elemento": "Sangue",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Assume forma animalesca em troca de fúria. (Suplemento Sobrevivendo ao Horror Pág. 50)"
+  },
+  {
+    "nome": "Singularidade Temporal",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "singularidade-temporal.png",
+    "elemento": "Morte",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Distorce realidade para decompor objetos avançando o tempo. (Suplemento Sobrevivendo ao Horror Pág. 52)"
+  },
+  {
+    "nome": "Pronunciar Sigilo",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "pronunciar-sigilo.png",
+    "elemento": "Conhecimento",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Profana Realidade pronunciando Sigilos do Conhecimento. (Suplemento Sobrevivendo ao Horror Pág. 54)"
+  },
+  {
+    "nome": "Milagre Ionizante",
+    "invertir": true,
+    "fonte": "horror",
+    "img": "milagre-ionizante.png",
+    "elemento": "Energia",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Embaralha realidade para destruir estrutura maligna em um corpo. (Suplemento Sobrevivendo ao Horror Pág. 56)"
+  },
+  {
+    "nome": "Passagem de Conhecimento",
+    "invertir": true,
+    "fonte": "arquivos",
+    "img": "passagem-de-conhecimento.png",
+    "elemento": "Sangue/Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Transfere consciência para o alvo. (Arquivos Secretos Pág. 48)"
+  },
+  {
+    "nome": "Passagem de Conhecimento Expandido",
+    "invertir": true,
+    "fonte": "arquivos",
+    "img": "passagem-de-conhecimento-expandido.png",
+    "elemento": "Sangue/Conhecimento",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Transporte consciência em massa para receptáculos. (Arquivos Secretos Pág. 50)"
+  }
+]

@@ -131,7 +131,7 @@
                 {% for ritual in rituais|selectattr('elemento', 'equalto', elem)|sort(attribute='nome') %}
                     <div class="mini-card {{ 'dual-border' if ritual.elemento == 'Sangue/Conhecimento' else '' }}"
                          data-fonte="{{ ritual.fonte }}"
-                         onclick="abrir('{{ ritual.nome }}', '{{ ritual.img }}', '{{ ritual.desc }}', '{{ ritual.elemento }}', '{{ ritual.pe }}', '{{ ritual.circulo }}', {{ 'true' if ritual.invertir else 'false' }})">
+                         onclick="abrir('{{ ritual.nome }}', '{{ ritual.img }}', '{{ ritual.desc }}', '{{ ritual.elemento }}', '{{ ritual.pe }}', '{{ ritual.circulo }}', {{'true' if ritual.invertir else 'false' }})">
                         <img src="/static/{{ ritual.img }}" alt="" class="{{ 'invert-icon' if ritual.invertir else '' }}">
                         <p>{{ ritual.nome }}</p>
                     </div>

@@ -1,0 +1,47 @@
+[
+  {
+    "nome": "Amaldiçoar Arma",
+    "img": "AmaldiçoarArma.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Florescer Caótico",
+    "img": "florescer-caotico.png",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Quando não se sabe o que fazer, deixe na mão do Outro Lado. Três raios saem do seu peito e acertam alvos aleatórios a sua volta, para cada raio você deve rolar um d20, caso o resultado sair 10 ou menor ele acerta um aliado e caso seja maior acerta um inimigo a sua escolha. O raio causa 3d10+5 de Energia."
+  },
+  {
+    "nome": "Cauterização Caótica",
+    "img": "cicatrizacao.png",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Estática e efeitos luminosos e sonoros surgem ao redor de um alvo. O alvo recupera 1d6+1 PV no início do turno dele, mas o caos adora se divertir, ao receber a cura também role 1d6 para efeitos aleatórios."
+  },
+  {
+    "nome": "Coincidência Forçada",
+    "img": "coincidencia-forcada.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Recebe bônus em testes.(Para melhor descrição abra o livro de regras na página 126)"
+  },
+  {
+    "nome": "Eletrocussão",
+    "img": "eletrocussao.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Corrente voltaica eletrocuta o alvo.(Para melhor descrição abra o livro de regras na página 131)"
+  }
+]
+
+

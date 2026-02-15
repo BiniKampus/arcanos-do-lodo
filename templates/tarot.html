@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oráculo do Destino</title>
+    <style>
+        body {
+            background: radial-gradient(circle at center, #0a0a0a 0%, #050505 100%);
+            color: white;
+            font-family: 'Courier New', monospace;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            min-height: 100vh; margin: 0; overflow: hidden;
+        }
+
+        h1 { color: #d4af37; letter-spacing: 5px; text-transform: uppercase; font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* --- MESA DE ADIVINHAÇÃO --- */
+        .cena {
+            width: 260px; height: 400px; perspective: 1000px; cursor: pointer;
+        }
+
+        .cartao {
+            width: 100%; height: 100%; position: relative;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .cartao.girado { transform: rotateY(180deg); }
+
+        .face {
+            position: absolute; width: 100%; height: 100%;
+            backface-visibility: hidden; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            border: 4px solid #d4af37; border-radius: 15px;
+            background: #111; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        /* VERSO DA CARTA (O Mistério) */
+        .face-verso {
+            background: linear-gradient(45deg, #0a0a0a 25%, #151515 25%, #151515 50%, #0a0a0a 50%, #0a0a0a 75%, #151515 75%, #151515 100%);
+            background-size: 40px 40px;
+        }
+        .face-verso::after {
+            content: "ORAL"; color: #d4af37; font-size: 3rem; font-weight: bold; opacity: 0.1; transform: rotate(-45deg);
+        }
+
+        /* FRENTE DA CARTA (Revelada) */
+        .face-frente { transform: rotateY(180deg); padding: 10px; box-sizing: border-box; }
+
+        #carta-img { width: 90%; height: 250px; object-fit: contain; margin-bottom: 15px; border-radius: 8px; }
+        #carta-nome { font-size: 1.2rem; color: #d4af37; text-transform: uppercase; margin: 0; }
+        #carta-significado { font-size: 0.7rem; color: #777; margin-top: 5px; font-weight: bold; }
+
+        /* --- DESCRIÇÃO DO DESTINO --- */
+        .info-container {
+            margin-top: 40px; text-align: center; max-width: 400px; min-height: 80px;
+            padding: 20px; border-top: 1px solid #333; opacity: 0; transition: 0.5s;
+        }
+        .info-container.visivel { opacity: 1; }
+        #carta-desc { font-size: 0.9rem; line-height: 1.4; color: #bbb; }
+
+        /* BOTÃO TÉCNICO */
+        .btn-sortear {
+            margin-top: 20px; background: transparent; border: 1px solid #d4af37;
+            color: #d4af37; padding: 10px 20px; font-family: inherit; cursor: pointer;
+            transition: 0.3s; text-transform: uppercase; letter-spacing: 2px;
+        }
+        .btn-sortear:hover { background: #d4af37; color: black; box-shadow: 0 0 15px #d4af37; }
+
+        .voltar { position: fixed; top: 20px; left: 20px; color: #555; text-decoration: none; font-size: 0.8rem; }
+        .voltar:hover { color: #d4af37; }
+    </style>
+</head>
+<body>
+
+    <a href="/" class="voltar">← VOLTAR AO TERMINAL</a>
+
+    <h1>CONSULTAR O DESTINO</h1>
+
+    <div class="cena" onclick="tirarCarta()">
+        <div class="cartao" id="deck-card">
+            <div class="face face-verso"></div>
+            <div class="face face-frente">
+                <img id="carta-img" src="" alt="">
+                <h2 id="carta-nome"></h2>
+                <div id="carta-significado"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-container" id="info">
+        <p id="carta-desc"></p>
+        <button class="btn-sortear" onclick="event.stopPropagation(); tirarCarta()">Novo Destino</button>
+    </div>
+
+    <script>
+        let estaGirado = false;
+
+        function tirarCarta() {
+            const cartao = document.getElementById('deck-card');
+            const info = document.getElementById('info');
+
+            // Se já estiver girado, desvira primeiro para sortear de novo
+            if (estaGirado) {
+                cartao.classList.remove('girado');
+                info.classList.remove('visivel');
+                estaGirado = false;
+                return;
+            }
+
+            // Busca os dados do seu novo sistema JSON
+            fetch('/sortear_tarot')
+                .then(response => response.json())
+                .then(data => {
+                    // Preenche os dados antes de girar
+                    document.getElementById('carta-img').src = '/static/' + data.img;
+                    document.getElementById('carta-nome').innerText = data.nome;
+                    document.getElementById('carta-significado').innerText = data.significado.upperCase;
+                    document.getElementById('carta-desc').innerText = data.desc;
+
+                    // Gira a carta e mostra o texto
+                    setTimeout(() => {
+                        cartao.classList.add('girado');
+                        info.classList.add('visivel');
+                        estaGirado = true;
+                    }, 100);
+                })
+                .catch(err => console.error("Erro ao invocar o destino:", err));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+[
+  {
+    "nome": "Amaldiçoar Arma",
+    "img": "AmaldiçoarArma.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você imbui a arma ou munições com o elemento, fazendo com que causem +1d6 de dano do tipo do elemento. (Para melhor descrição abra o livro de regras na página 124)"
+  },
+  {
+    "nome": "Cicatrização",
+    "img": "cicatrizacao.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Você acelera o tempo ao redor das feridas do alvo. O alvo recupera 3d8+3 PV, mas envelhece 1 ano automaticamente."
+  },
+  {
+    "nome": "Decadência",
+    "img": "decadencia.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Espirais de trevas envolvem sua mão e definham o alvo, que sofre 2d8+2 pontos de dano de Morte."
+  },
+  {
+    "nome": "Deflagração de Energia",
+    "img": "deflagracao-de-energia.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "4ºCírculo",
+    "pe": 4,
+    "desc": "Você acumula uma quantidade imensa de Energia e a libera em uma explosão intensa. Todos na área sofrem 3d10 x 10 de dano."
+  },
+  {
+    "nome": "Desacelerar Impacto",
+    "img": "desacelerar-impacto.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "O alvo cai lentamente. A velocidade da queda é reduzida para 18m por rodada."
+  },
+  {
+    "nome": "Descarnar",
+    "img": "descarnar.png",
+    "fonte": "livro",
+    "elemento": "Sangue",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "A pele do alvo é dilacerada, abrindo cortes profundos. (Para melhor descrição abra o livro de regras na página 129)"
+  },
+  {
+    "nome": "Eco Espiral",
+    "img": "eco-espiral.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Repete o dano que o alvo sofreu ao longo das rodadas concentrando. (Para melhor descrição abra o livro de regras na página 131)"
+  },
+  {
+    "nome": "Eletrocussão",
+    "img": "eletrocussao.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Corrente voltaica eletrocuta o alvo."
+  },
+  {
+    "nome": "Espirais da Perdição",
+    "img": "espirais-da-perdicao.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Inimigos sofrem penalidade em ataque. (Para melhor descrição abra o livro de regras na página 132)"
+  },
+  {
+    "nome": "Ferver Sangue",
+    "img": "ferver-sangue.png",
+    "fonte": "livro",
+    "elemento": "Sangue",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Faz o sangue do alvo entrar em ebulição, causando dano e deixando-o fraco."
+  },
+  {
+    "nome": "Hemofagia",
+    "img": "hemofagia.png",
+    "fonte": "livro",
+    "elemento": "Sangue",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Absorve o sangue do alvo, causando dano e recuperando seus pontos de vida."
+  },
+  {
+    "nome": "Invadir Mente",
+    "img": "invadir-mente.png",
+    "fonte": "livro",
+    "elemento": "Conhecimento",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Gera uma rajada mental ou se conecta telepaticamente."
+  },
+  {
+    "nome": "Mergulho Mental",
+    "img": "mergulho-mental.png",
+    "fonte": "livro",
+    "elemento": "Conhecimento",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Se infiltra na mente do alvo para vasculhar seus pensamentos."
+  },
+  {
+    "nome": "Perturbação",
+    "img": "perturbacao.png",
+    "fonte": "livro",
+    "elemento": "Conhecimento",
+    "circulo": "1ºCírculo",
+    "pe": 1,
+    "desc": "Força o alvo a obedecer a uma ordem."
+  },
+  {
+    "nome": "Purgatório",
+    "img": "purgatorio.png",
+    "fonte": "livro",
+    "elemento": "Sangue",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Área de sangue deixa alvos vulneráveis a dano e causa dor."
+  },
+  {
+    "nome": "Salto Fantasma",
+    "img": "salto-fantasma.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Teletransporta você e outros seres para um ponto dentro do alcance."
+  },
+  {
+    "nome": "Tela de Ruído",
+    "img": "tela-de-ruido.png",
+    "fonte": "livro",
+    "elemento": "Energia",
+    "circulo": "2ºCírculo",
+    "pe": 2,
+    "desc": "Cria uma película protetora que absorve dano."
+  },
+  {
+    "nome": "Tentáculos de Lodo",
+    "img": "tentaculos-de-lodo.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "Tentáculos pretos atacam e agarram seres na área."
+  },
+  {
+    "nome": "Zerar Entropia",
+    "img": "zerar-entropia.png",
+    "fonte": "livro",
+    "elemento": "Morte",
+    "circulo": "3ºCírculo",
+    "pe": 3,
+    "desc": "O alvo fica lento ou paralisado."
+  }
+]
