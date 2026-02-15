@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal de Investigação</title>
+    <style>
+        body {
+            background: #050505;
+            color: #d4af37;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .menu-box {
+            border: 2px solid #d4af37;
+            padding: 40px;
+            margin: auto;
+            background: #0a0a0a;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+        }
+        .btn {
+            display: block;
+            padding: 15px 30px;
+            margin: 20px 0;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            background: #d4af37;
+            color: black;
+            box-shadow: 0 0 15px #d4af37;
+        }
+        /* Estilo especial para o Oráculo */
+        .btn-oracle {
+            border-style: double;
+            border-width: 3px;
+        }
+        h1 { font-size: 1.5rem; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <div class="menu-box">
+        <h1>SISTEMA DE APOIO À OCULTISTAS</h1>
+        <a href="/sorteador" class="btn">ACEDER SORTEADOR (RESTRITO)</a>
+        <a href="/galeria" class="btn">ARQUIVO DE RITUAIS</a>
+
+        <a href="/tarot" class="btn btn-oracle">CONSULTAR ORÁCULO (DESTINO)</a>
+    </div>
+</body>
+</html>
